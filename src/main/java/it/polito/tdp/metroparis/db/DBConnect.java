@@ -1,9 +1,13 @@
 package it.polito.tdp.metroparis.db;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.zaxxer.hikari.HikariDataSource;
+
+import it.polito.tdp.metroparis.model.Fermata;
 
 /**
  * Utility class for connecting to the database
@@ -24,7 +28,7 @@ public class DBConnect {
 
 			ds.setJdbcUrl(jdbcURL);
 			ds.setUsername("root");
-			ds.setPassword("root");
+			ds.setPassword("rootroot");
 
 			// configurazione MySQL
 			ds.addDataSourceProperty("cachePrepStmts", "true");
@@ -42,5 +46,6 @@ public class DBConnect {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
+	
 }
